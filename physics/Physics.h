@@ -1,11 +1,36 @@
 #pragma once
 
-namespace Physics {
+#include "../header.h"
 
-inline void applyGravity(float& positionY, float& velocityY, float gravityForce)
+
+
+// =============================
+// Physics Namespace
+// =============================
+namespace Physics 
 {
-    velocityY -= gravityForce;
-    positionY += velocityY;
-}
 
-} // namespace Physics
+
+
+
+    // --------------------------------
+    // Apply Gravity
+    // --------------------------------
+    inline void applyGravity(float& positionY, float& velocityY, float gravityForce = 0.5f)
+    {
+        velocityY -= gravityForce;
+        positionY += velocityY;
+    }
+    // --------------------------------
+    // Apply Gravity
+    // --------------------------------
+
+
+
+
+
+
+}
+// =============================
+// Physics Namespace
+// =============================

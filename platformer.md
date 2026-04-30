@@ -12,6 +12,17 @@ The goal is to implement a complete playable game with:
 - Score and game rules
 - Optional sprite-based graphics upgrade
 
+## 🎯 Current Priority
+
+The next main focus is to make the game feel more complete and less basic by adding:
+
+- Real collectibles and meaningful scoring
+- A proper level system instead of one simple scene
+- Better enemy behavior beyond left-right movement
+- Stronger UI and polish, including menus, pause, HUD, and clear messages
+
+These are the highest-priority features before any visual sprite upgrade.
+
 The project focuses on core computer graphics concepts:
 
 - Real-time rendering
@@ -135,39 +146,66 @@ Build a fully playable 2D platformer using simple shapes.
 
 ---
 
-# 🎨 PHASE 2 — POLISH (Day 11–12)
+# 🎨 PHASE 2 — GAME EXPANSION + POLISH (NEXT PRIORITY)
 
 ## 🎯 Goal:
 
-Make the game feel and look better.
+Make the game deeper, clearer, and more complete before moving to sprites.
 
 ---
 
-## 🎨 Day 11 — Visual Improvements
+## 🪙 Day 11 — Collectibles + Scoring
 
-- Add background color
-- Improve object colors
-- Add UI text (score/lives)
+- Add coins as the main collectible
+- Make each coin worth +1 point
+- Add bonus points for finishing a level
+- Add bonus points for defeating an enemy
+- Keep the scoring simple and easy to understand
 
-✔ Output: Clean-looking game
-
----
-
-## 🧪 Day 12 — Debug & Testing
-
-- Fix bugs
-- Improve movement feel
-- Prepare demo explanation
-
-✔ Output: Submission-ready project
+✔ Output: Score feels meaningful
 
 ---
 
-# 🖼️ PHASE 3 — OPTIONAL GRAPHICS UPGRADE (Day 13–18)
+## 🧭 Day 12 — Level System
+
+- Create 3 small handcrafted levels
+- Use one finish goal per level
+- Use coin-based scoring inside the levels
+- Add one restart system for failed runs
+- Add a simple transition to the next level after completion
+
+✔ Output: More than one simple scene
+
+---
+
+## 👾 Day 13 — Enemy Behavior Upgrade
+
+- Patrol normally by default
+- Chase the player when close
+- Hurt the player on touch
+- Stay within level boundaries
+
+✔ Output: Enemies feel more like part of the game
+
+---
+
+## 🎨 Day 14 — UI and Polish
+
+- Add a main menu
+- Add pause and resume
+- Add HUD for score, lives, and level
+- Add win/lose messages
+- Improve background visuals and readable colors
+
+✔ Output: Game is easier to understand and play
+
+---
+
+# 🖼️ PHASE 3 — OPTIONAL GRAPHICS UPGRADE (LATER)
 
 ## 🎯 Goal:
 
-Replace shapes with sprite-based graphics.
+Replace shapes with sprite-based graphics after gameplay is solid.
 
 ---
 
