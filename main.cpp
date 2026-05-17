@@ -116,97 +116,172 @@ float groundTop = groundY + groundHeight;
 // ---------------------------------------
 inline void drawPlayerSprite()
 {
-    // Body
+    // Left shoe + outline
     rectangle_with_width_height(4.0f, 8.0f, 12.0f, 8.0f, marioBrownR, marioBrownG, marioBrownB);
     rectangle_outline_with_width_height(4.0f, 8.0f, 12.0f, 8.0f, marioBlackR, marioBlackG, marioBlackB);
-    // Body
+    // Left shoe + outline
 
 
 
-    // Legs
+
+    // Right shoe + outline
     rectangle_with_width_height(22.0f, 8.0f, 14.0f, 9.0f, marioBrownR, marioBrownG, marioBrownB);
     rectangle_outline_with_width_height(22.0f, 8.0f, 14.0f, 9.0f, marioBlackR, marioBlackG, marioBlackB);
-    // Legs
+    // Right shoe + outline
 
 
 
-    // Arms
+
+    // Left leg + outline
     rectangle_with_width_height(10.0f, 18.0f, 8.0f, 16.0f, marioBlueR, marioBlueG, marioBlueB);
     rectangle_outline_with_width_height(10.0f, 18.0f, 8.0f, 16.0f, marioBlackR, marioBlackG, marioBlackB);
-    // Arms
+    // Left leg + outline
 
 
 
-    // Head
+    // Right leg + outline
     rectangle_with_width_height(20.0f, 18.0f, 10.0f, 18.0f, marioBlueR, marioBlueG, marioBlueB);
     rectangle_outline_with_width_height(20.0f, 18.0f, 10.0f, 18.0f, marioBlackR, marioBlackG, marioBlackB);
-    // Head
+    // Right leg + outline
 
 
 
-    // Buttons
+    // Shirt + outline
     rectangle_with_width_height(8.0f, 30.0f, 24.0f, 14.0f, marioRedR, marioRedG, marioRedB);
     rectangle_outline_with_width_height(8.0f, 30.0f, 24.0f, 14.0f, marioBlackR, marioBlackG, marioBlackB);
-    // Buttons
+    // Shirt + outline
 
-    
+
+
+    // Upper body + outline
     rectangle_with_width_height(13.0f, 35.0f, 13.0f, 13.0f, marioBlueR, marioBlueG, marioBlueB);
     rectangle_outline_with_width_height(13.0f, 35.0f, 13.0f, 13.0f, marioBlackR, marioBlackG, marioBlackB);
-    
+    // Upper body + outline
 
+
+
+
+    // Buttons + outline
     circle_with_fan(16.0f, 40.0f, 1.8f, marioYellowR, marioYellowG, marioYellowB);
     circle_outline_with_fan(16.0f, 40.0f, 1.8f, marioBlackR, marioBlackG, marioBlackB);
     circle_with_fan(24.5f, 40.0f, 1.8f, marioYellowR, marioYellowG, marioYellowB);
     circle_outline_with_fan(24.5f, 40.0f, 1.8f, marioBlackR, marioBlackG, marioBlackB);
+    // Buttons + outline
 
+
+
+
+    // Left arm + outline
     rectangle_with_width_height(5.5f, 27.0f, 5.0f, 11.0f, marioSkinR, marioSkinG, marioSkinB);
     rectangle_outline_with_width_height(5.5f, 27.0f, 5.0f, 11.0f, marioBlackR, marioBlackG, marioBlackB);
+    // Left arm + outline
 
+
+
+
+    // Left glove + outline
     circle_with_fan(4.8f, 23.5f, 3.0f, marioWhiteR, marioWhiteG, marioWhiteB);
     circle_outline_with_fan(4.8f, 23.5f, 3.0f, marioBlackR, marioBlackG, marioBlackB);
+    // Left glove + outline
 
+
+
+
+    // Right arm + outline
     rectangle_with_width_height(30.0f, 28.0f, 5.0f, 10.0f, marioSkinR, marioSkinG, marioSkinB);
     rectangle_outline_with_width_height(30.0f, 28.0f, 5.0f, 10.0f, marioBlackR, marioBlackG, marioBlackB);
+    // Right arm + outline
 
+
+
+
+    // Right glove + outline
     circle_with_fan(34.0f, 24.5f, 3.1f, marioWhiteR, marioWhiteG, marioWhiteB);
     circle_outline_with_fan(34.0f, 24.5f, 3.1f, marioBlackR, marioBlackG, marioBlackB);
+    // Right glove + outline
 
+
+
+
+    // Face 
     rectangle_with_width_height(10.0f, 42.0f, 4.0f, 4.0f, marioSkinR, marioSkinG, marioSkinB);
+    // Face
+
+
+
+    // Cap + outline
     rectangle_with_width_height(11.0f, 46.0f, 19.0f, 9.0f, marioRedR, marioRedG, marioRedB);
     rectangle_outline_with_width_height(11.0f, 46.0f, 19.0f, 9.0f, marioBlackR, marioBlackG, marioBlackB);
     rectangle_with_width_height(9.0f, 44.0f, 22.0f, 4.0f, marioRedR, marioRedG, marioRedB);
     rectangle_outline_with_width_height(9.0f, 44.0f, 22.0f, 4.0f, marioBlackR, marioBlackG, marioBlackB);
+    // Cap + outline
 
+
+
+
+    // M logo on cap + outline
     circle_with_fan(14.0f, 47.0f, 1.7f, marioYellowR, marioYellowG, marioYellowB);
     circle_outline_with_fan(14.0f, 47.0f, 1.7f, marioBlackR, marioBlackG, marioBlackB);
     circle_with_fan(27.0f, 47.0f, 1.7f, marioYellowR, marioYellowG, marioYellowB);
     circle_outline_with_fan(27.0f, 47.0f, 1.7f, marioBlackR, marioBlackG, marioBlackB);
+    // M logo on cap + outline
 
+
+
+
+    // Nose + outline
     rectangle_with_width_height(20.0f, 41.0f, 2.5f, 3.0f, marioBlackR, marioBlackG, marioBlackB);
     circle_with_fan(31.0f, 39.0f, 2.3f, marioSkinR, marioSkinG, marioSkinB);
     circle_outline_with_fan(31.0f, 39.0f, 2.3f, marioBlackR, marioBlackG, marioBlackB);
+    // Nose + outline
 
+
+
+    // Mustache 
     rectangle_with_width_height(20.5f, 37.5f, 8.0f, 2.6f, marioBlackR, marioBlackG, marioBlackB);
     rectangle_with_width_height(21.0f, 35.0f, 6.8f, 2.2f, marioBlackR, marioBlackG, marioBlackB);
+    // Mustache
 
+
+
+
+
+    // Eyes + outline
     circle_with_fan(24.5f, 42.5f, 1.8f, marioWhiteR, marioWhiteG, marioWhiteB);
     circle_outline_with_fan(24.5f, 42.5f, 1.8f, marioBlackR, marioBlackG, marioBlackB);
     circle_with_fan(25.1f, 42.2f, 0.8f, marioBlackR, marioBlackG, marioBlackB);
+    // Eyes + outline
 
+
+
+    // Pants + outline
     rectangle_with_width_height(23.0f, 19.0f, 2.5f, 14.0f, marioBrownR, marioBrownG, marioBrownB);
     rectangle_outline_with_width_height(23.0f, 19.0f, 2.5f, 14.0f, marioBlackR, marioBlackG, marioBlackB);
     rectangle_with_width_height(13.0f, 19.0f, 3.0f, 13.0f, marioBrownR, marioBrownG, marioBrownB);
     rectangle_outline_with_width_height(13.0f, 19.0f, 3.0f, 13.0f, marioBlackR, marioBlackG, marioBlackB);
+    // Pants + outline
 
+
+
+
+
+    // Suspenders + outline
     rectangle_with_width_height(10.0f, 6.0f, 13.0f, 4.0f, marioBrownR, marioBrownG, marioBrownB);
     rectangle_outline_with_width_height(10.0f, 6.0f, 13.0f, 4.0f, marioBlackR, marioBlackG, marioBlackB);
     rectangle_with_width_height(23.0f, 6.0f, 13.0f, 5.0f, marioBrownR, marioBrownG, marioBrownB);
     rectangle_outline_with_width_height(23.0f, 6.0f, 13.0f, 5.0f, marioBlackR, marioBlackG, marioBlackB);
+    // Suspenders + outline
 }
 // ---------------------------------------
 // Player rendering
 // ---------------------------------------
 
+
+
+
+// ---------------------------------------
+// Input handling
+// ---------------------------------------
 inline void handleKeyPress(unsigned char key, int x, int y)
 {
     if (key == 27)
@@ -217,11 +292,24 @@ inline void handleKeyPress(unsigned char key, int x, int y)
 
     Input::keyPress(key, x, y);
 }
+// ---------------------------------------
+// Input handling
+// ---------------------------------------
 
+
+
+
+
+// ---------------------------------------
+// Key release handling
+// ---------------------------------------
 inline void handleKeyRelease(unsigned char key, int x, int y)
 {
     Input::keyRelease(key, x, y);
 }
+// ---------------------------------------
+// Key release handling
+// ---------------------------------------
 
 
 
@@ -1238,10 +1326,6 @@ void display()
             brickR, brickG, brickB // Red color
         );
     }
-
-
-
-
     // ----------------------------------------
     // Platforms rectangles foreach loop
     // ----------------------------------------
