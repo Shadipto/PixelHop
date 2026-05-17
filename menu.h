@@ -78,6 +78,9 @@ namespace MenuUI
 
 
 
+    // --------------------------------
+    // Menu drawing
+    // --------------------------------
     inline void draw(float windowWidth, float windowHeight)
     {
         float pulseScale = 1.0f + 0.14f * sin(animationAngle * PI / 180.0f);
@@ -92,7 +95,12 @@ namespace MenuUI
         float leftPanelCenterX = cardX1 + 147.5f;
         float rightPanelCenterX = cardX2 - 147.5f;
 
-        
+
+
+
+        // -------------------------------
+        // Background gradient
+        // -------------------------------
         glBegin(GL_QUADS);
             glColor3ub(menuBottomR, menuBottomG, menuBottomB);
             glVertex2f(0.0f, windowHeight);
@@ -102,15 +110,47 @@ namespace MenuUI
             glVertex2f(windowWidth, 0.0f);
             glVertex2f(0.0f, 0.0f);
         glEnd();
+        // -------------------------------
+        // Background gradient
+        // -------------------------------
 
+
+
+
+
+
+        // -------------------------------------
+        // Main menu card container and border
+        // -------------------------------------
         rectangle_with_width_height(cardX1, cardY2, cardX2 - cardX1, cardY2 - cardY1, 10, 30, 55);
         rectangle_outline_with_width_height(cardX1, cardY2, cardX2 - cardX1, cardY2 - cardY1, 255, 220, 120);
+        // -------------------------------------
+        // Main menu card container and border
+        // -------------------------------------
 
+
+
+
+
+        // ---------------------------------
+        // Top badge strip with "MENU" label
+        // ---------------------------------
         rectangle_with_width_height(centerX - 78.0f, cardY2 - 34.0f, 156.0f, 28.0f, 255, 220, 120);
         rectangle_outline_with_width_height(centerX - 78.0f, cardY2 - 34.0f, 156.0f, 28.0f, 20, 45, 70);
         glColor3ub(255, 255, 255);
         drawCenteredText(centerX, cardY2 - 54.0f, "MENU", GLUT_BITMAP_HELVETICA_18);
+        // ---------------------------------
+        // Top badge strip with "MENU" label
+        // ---------------------------------
 
+
+
+
+
+
+        // ------------------------------------------
+        // Title panel and pulsing PIXELHOP wordmark
+        // ------------------------------------------
         rectangle_with_width_height(centerX - 170.0f, 456.0f, 340.0f, 58.0f, 18, 45, 78);
         rectangle_outline_with_width_height(centerX - 170.0f, 456.0f, 340.0f, 58.0f, 255, 215, 0);
         glPushMatrix();
@@ -121,25 +161,91 @@ namespace MenuUI
         glColor3ub(255, 255, 255);
         drawCenteredText(0.0f, -6.0f, "PIXELHOP", GLUT_BITMAP_TIMES_ROMAN_24);
         glPopMatrix();
+        // ------------------------------------------
+        // Title panel and pulsing PIXELHOP wordmark
+        // ------------------------------------------
 
+
+
+
+
+
+        // -----------------------------
+        // Subtitle / tagline
+        // -----------------------------
         glColor3ub(255, 235, 150);
         drawCenteredText(centerX, 354.0f, "Jump, collect, and clear every level", GLUT_BITMAP_HELVETICA_18);
+        // -----------------------------
+        // Subtitle / tagline
+        // -----------------------------
 
+
+
+
+
+
+        // --------------------------------
+        // Pulsing start prompt container
+        // --------------------------------
         glPushMatrix();
         glTranslatef(centerX, 307.0f, 0.0f);
         glScalef(promptPulse, promptPulse, 1.0f);
+        // --------------------------------
+        // Pulsing start prompt container
+        // --------------------------------
 
+
+
+
+
+        // -----------------------------
+        // Outer prompt frame
+        // -----------------------------
         glColor3ub(255, 190, 40);
         rectangle_with_width_height(-168.0f, 30.0f, 336.0f, 60.0f, 120, 65, 18);
         rectangle_outline_with_width_height(-168.0f, 30.0f, 336.0f, 60.0f, 255, 235, 120);
+        // -----------------------------
+        // Outer prompt frame
+        // -----------------------------
 
+
+
+
+
+
+        // -----------------------------
+        // Inner prompt panel
+        // -----------------------------
         glColor3ub(255, 215, 0);
         rectangle_with_width_height(-155.0f, 24.0f, 310.0f, 48.0f, 80, 45, 20);
         rectangle_outline_with_width_height(-155.0f, 24.0f, 310.0f, 48.0f, 255, 215, 0);
+        // -----------------------------
+        // Inner prompt panel
+        // -----------------------------
 
+
+
+
+
+
+        // -----------------------------
+        // Prompt text
+        // -----------------------------
         glColor3ub(255, 245, 180);
         drawCenteredText(0.0f, -2.0f, "Press Enter to Start", GLUT_BITMAP_HELVETICA_18);
+        // -----------------------------
+        // Prompt text
+        // -----------------------------
 
+
+
+
+
+
+
+        // ------------------------------------------
+        // Decorative underline and arrow indicator
+        // ------------------------------------------
         glColor3ub(255, 220, 120);
         glLineWidth(2.0f);
         glBegin(GL_LINES);
@@ -153,28 +259,94 @@ namespace MenuUI
 
         glColor3ub(255, 255, 255);
         glPopMatrix();
+        // ------------------------------------------
+        // Decorative underline and arrow indicator
+        // ------------------------------------------
 
+
+
+
+
+
+
+
+        // -----------------------------
+        // Left info panel: controls
+        // -----------------------------
         rectangle_with_width_height(cardX1 + 40.0f, 262.0f, 215.0f, 52.0f, 20, 45, 70);
         rectangle_outline_with_width_height(cardX1 + 40.0f, 262.0f, 215.0f, 52.0f, 90, 210, 255);
         glColor3ub(255, 255, 255);
         drawCenteredText(leftPanelCenterX, 244.0f, "Controls", GLUT_BITMAP_HELVETICA_18);
         glColor3ub(220, 235, 255);
         drawCenteredText(leftPanelCenterX, 224.0f, "A / D move   Space jump", GLUT_BITMAP_HELVETICA_18);
+        // -----------------------------
+        // Left info panel: controls
+        // -----------------------------
 
+
+
+
+
+
+
+        // -----------------------------
+        // Right info panel: objective
+        // -----------------------------
         rectangle_with_width_height(cardX2 - 255.0f, 262.0f, 215.0f, 52.0f, 35, 20, 60);
         rectangle_outline_with_width_height(cardX2 - 255.0f, 262.0f, 215.0f, 52.0f, 255, 160, 90);
         glColor3ub(255, 255, 255);
         drawCenteredText(rightPanelCenterX, 244.0f, "Objective", GLUT_BITMAP_HELVETICA_18);
         glColor3ub(255, 230, 200);
         drawCenteredText(rightPanelCenterX, 224.0f, "Collect all coins", GLUT_BITMAP_HELVETICA_18);
+        // -----------------------------
+        // Right info panel: objective
+        // -----------------------------
 
+
+
+
+
+        // -----------------------------
+        // Level count callout
+        // -----------------------------
         glColor3ub(255, 255, 255);
         drawCenteredText(centerX, 166.0f, "3 Levels to Conquer", GLUT_BITMAP_HELVETICA_18);
+        // -----------------------------
+        // Level count callout
+        // -----------------------------
 
+
+
+
+
+
+        // ---------------------------
+        // Decorative pulsing coins
+        // ---------------------------
         drawCoin(cardX1 + 74.0f, 158.0f, 16.0f, smallPulse);
         drawCoin(cardX2 - 74.0f, 158.0f, 16.0f, smallPulse);
+        // ---------------------------
+        // Decorative pulsing coins
+        // ---------------------------
 
+
+
+
+
+
+        // --------------------------
+        // Footer challenge message
+        // --------------------------
         glColor3ub(255, 220, 120);
         drawCenteredText(centerX, 118.0f, "Clear the challenge. Unlock the next stage.", GLUT_BITMAP_HELVETICA_18);
+        // --------------------------
+        // Footer challenge message
+        // --------------------------
+
     }
+    // --------------------------------
+    // Menu drawing
+    // --------------------------------
 }
+
+
