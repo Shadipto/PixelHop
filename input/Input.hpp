@@ -81,6 +81,22 @@ namespace Input
 
 
 
+    // --------------------------------
+    // Start Requested State
+    // --------------------------------
+    inline bool& startRequestedState()
+    {
+        static bool value = false;
+        return value;
+    }
+    // --------------------------------
+    // Start Requested State
+    // --------------------------------
+
+
+
+
+
     // -------------------------------
     // Terminal print
     // -------------------------------
@@ -123,6 +139,12 @@ namespace Input
                 if (isPressed) 
                 {
                     jumpRequestedState() = true;
+                }
+                break;
+            case 13:
+                if (isPressed)
+                {
+                    startRequestedState() = true;
                 }
                 break;
             default:
@@ -241,6 +263,23 @@ namespace Input
     }
     // --------------------------------
     // Consume Jump Request
+    // --------------------------------
+
+
+
+
+
+    // --------------------------------
+    // Consume Start Request
+    // --------------------------------
+    inline bool consumeStartRequested()
+    {
+        bool requested = startRequestedState();
+        startRequestedState() = false;
+        return requested;
+    }
+    // --------------------------------
+    // Consume Start Request
     // --------------------------------
 
 
