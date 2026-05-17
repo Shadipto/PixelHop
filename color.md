@@ -56,16 +56,3 @@ Use these if you want an authentic NES / SMB1 retro look; they reflect community
 | **Retro Red Accent**   | `#B92716` |   `185, 39, 22` |
 
 ---
-
-### Implementation Notes
-
-- **Normalize** RGB to floats for OpenGL: `r/255.0f, g/255.0f, b/255.0f`.
-- **Create 2–3 shades** per base color: e.g., multiply RGB by `0.7` for shadow and `1.15` (clamped to 255) for highlight.
-- **For retro authenticity** limit each sprite/tile to 3–4 colors and reuse palette entries across tiles.
-- **Example usage in GLUT/OpenGL (C++):**
-  - Convert `RGB(254,0,2)` to normalized floats: `glColor3f(254.0f/255.0f, 0.0f/255.0f, 2.0f/255.0f);`
-  - Store palettes as arrays of `glm::vec3` or `float[3]` for easy access.
-
----
-
-You can copy the above block into a `palette.md` file or print it directly in your terminal. If you want, I can format the same palette as a C++ header with normalized `float` constants ready to include in your project.

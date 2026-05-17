@@ -116,23 +116,43 @@ float groundTop = groundY + groundHeight;
 // ---------------------------------------
 inline void drawPlayerSprite()
 {
+    // Body
     rectangle_with_width_height(4.0f, 8.0f, 12.0f, 8.0f, marioBrownR, marioBrownG, marioBrownB);
     rectangle_outline_with_width_height(4.0f, 8.0f, 12.0f, 8.0f, marioBlackR, marioBlackG, marioBlackB);
+    // Body
 
+
+
+    // Legs
     rectangle_with_width_height(22.0f, 8.0f, 14.0f, 9.0f, marioBrownR, marioBrownG, marioBrownB);
     rectangle_outline_with_width_height(22.0f, 8.0f, 14.0f, 9.0f, marioBlackR, marioBlackG, marioBlackB);
+    // Legs
 
+
+
+    // Arms
     rectangle_with_width_height(10.0f, 18.0f, 8.0f, 16.0f, marioBlueR, marioBlueG, marioBlueB);
     rectangle_outline_with_width_height(10.0f, 18.0f, 8.0f, 16.0f, marioBlackR, marioBlackG, marioBlackB);
+    // Arms
 
+
+
+    // Head
     rectangle_with_width_height(20.0f, 18.0f, 10.0f, 18.0f, marioBlueR, marioBlueG, marioBlueB);
     rectangle_outline_with_width_height(20.0f, 18.0f, 10.0f, 18.0f, marioBlackR, marioBlackG, marioBlackB);
+    // Head
 
+
+
+    // Buttons
     rectangle_with_width_height(8.0f, 30.0f, 24.0f, 14.0f, marioRedR, marioRedG, marioRedB);
     rectangle_outline_with_width_height(8.0f, 30.0f, 24.0f, 14.0f, marioBlackR, marioBlackG, marioBlackB);
+    // Buttons
 
+    
     rectangle_with_width_height(13.0f, 35.0f, 13.0f, 13.0f, marioBlueR, marioBlueG, marioBlueB);
     rectangle_outline_with_width_height(13.0f, 35.0f, 13.0f, 13.0f, marioBlackR, marioBlackG, marioBlackB);
+    
 
     circle_with_fan(16.0f, 40.0f, 1.8f, marioYellowR, marioYellowG, marioYellowB);
     circle_outline_with_fan(16.0f, 40.0f, 1.8f, marioBlackR, marioBlackG, marioBlackB);

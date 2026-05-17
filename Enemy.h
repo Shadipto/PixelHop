@@ -119,16 +119,20 @@ namespace Enemy
 
 
     // --------------------------------
-    // Enemy Draw [rectangle]
+    // Enemy Draw 
     // --------------------------------
     inline void enemyDraw()
     {
-        // Hit Box 
         float bw = width;
         float bh = height;
         float cx = x + bw * 0.5f;
 
-        // Body (main torso) 
+
+
+
+        // ---------------------------------
+        // Body (main rectangle)
+        // ---------------------------------
         float bodyTop = y + bh * 0.75f;
         rectangle_with_4_vertices(
             x, y,
@@ -137,8 +141,18 @@ namespace Enemy
             x, bodyTop,
             enemyMonsterBodyR, enemyMonsterBodyG, enemyMonsterBodyB
         );
+        // ---------------------------------
+        // Body (main rectangle)
+        // ---------------------------------
 
-        // Head (rounded using two small circles at top corners + rectangle)
+
+
+
+
+
+        // --------------------------------
+        // Shadow
+        // --------------------------------
         float headY = bodyTop;
         float headHeight = bh * 0.28f;
         rectangle_with_4_vertices(
@@ -148,40 +162,94 @@ namespace Enemy
             x + bw * 0.08f, headY + headHeight,
             enemyMonsterShadowR, enemyMonsterShadowG, enemyMonsterShadowB
         );
-        // Rounded cap using circles
+        // --------------------------------
+        // Shadow
+        // --------------------------------
+
+
+
+        // shadow circles 
         circle_with_fan(x + bw * 0.18f, headY + headHeight, bw * 0.12f, enemyMonsterShadowR, enemyMonsterShadowG, enemyMonsterShadowB);
         circle_with_fan(x + bw * 0.82f, headY + headHeight, bw * 0.12f, enemyMonsterShadowR, enemyMonsterShadowG, enemyMonsterShadowB);
+        // shadow circles
 
-        // Eyes
+
+
+
+
+        // --------------------------------
+        // Eye, Pupil, Mouth, Horns
+        // --------------------------------
+        
+        // Eye + pupil
         float eyeY = headY + headHeight * 0.6f;
         float eyeOffsetX = bw * 0.18f;
         float eyeR = bw * 0.08f;
+
+
+
+        // Eyes 
         circle_with_fan(cx - eyeOffsetX, eyeY, eyeR, enemyMonsterEyeR, enemyMonsterEyeG, enemyMonsterEyeB);
         circle_with_fan(cx + eyeOffsetX, eyeY, eyeR, enemyMonsterEyeR, enemyMonsterEyeG, enemyMonsterEyeB);
+        // Eyes
+
+
+
         // Pupils
         circle_with_fan(cx - eyeOffsetX, eyeY, eyeR * 0.45f, enemyMonsterPupilR, enemyMonsterPupilG, enemyMonsterPupilB);
         circle_with_fan(cx + eyeOffsetX, eyeY, eyeR * 0.45f, enemyMonsterPupilR, enemyMonsterPupilG, enemyMonsterPupilB);
+        // Pupils
 
-        // Mouth (smile) - small dark rectangle
+
+
+
+        // Mouth 
         float mouthW = bw * 0.28f;
         float mouthH = bh * 0.06f;
         float mouthX1 = cx - mouthW * 0.5f;
         float mouthY1 = headY + headHeight * 0.15f;
+
+
+
+
+        // Mouth
         rectangle_with_4_vertices(mouthX1, mouthY1, mouthX1 + mouthW, mouthY1, mouthX1 + mouthW, mouthY1 + mouthH, mouthX1, mouthY1 + mouthH, enemyMonsterMouthR, enemyMonsterMouthG, enemyMonsterMouthB);
+        // Mouth
+
+
+
 
         // Horns - small triangles
         float hornY = headY + headHeight + (bw * 0.03f);
+
+
+
+
+        // Horns
         triangle_with_3_vertices(x + bw * 0.15f, headY + headHeight, x + bw * 0.08f, hornY, x + bw * 0.22f, hornY, enemyMonsterHornR, enemyMonsterHornG, enemyMonsterHornB);
         triangle_with_3_vertices(x + bw * 0.85f, headY + headHeight, x + bw * 0.78f, hornY, x + bw * 0.92f, hornY, enemyMonsterHornR, enemyMonsterHornG, enemyMonsterHornB);
+        // Horns
 
-        // Legs - two small rectangles at bottom
+
+
+
+
+        // Legs
         float legW = bw * 0.22f;
         float legH = bh * 0.18f;
+
+
+
+
+        // Legs
         rectangle_with_4_vertices(x + bw * 0.14f, y - 0.0f, x + bw * 0.14f + legW, y - 0.0f, x + bw * 0.14f + legW, y + legH, x + bw * 0.14f, y + legH, enemyMonsterClawR, enemyMonsterClawG, enemyMonsterClawB);
         rectangle_with_4_vertices(x + bw * 0.64f, y - 0.0f, x + bw * 0.64f + legW, y - 0.0f, x + bw * 0.64f + legW, y + legH, x + bw * 0.64f, y + legH, enemyMonsterClawR, enemyMonsterClawG, enemyMonsterClawB);
+        // Legs
+
+
     }
     // --------------------------------
-    // Enemy Draw [rectangle]
+    // Enemy Draw 
     // --------------------------------
 
 

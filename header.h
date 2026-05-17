@@ -40,9 +40,11 @@ using namespace std;
     #include <GL/glut.h>
     #include <GL/glu.h>
     #include <GL/glext.h>
+    #include <freeglut.h>
 #else
     #include <GL/gl.h>
     #include <GL/glut.h>
     #include <GL/glu.h>
     #include <GL/glext.h>
+    #include <freeglut.h>
 #endif
